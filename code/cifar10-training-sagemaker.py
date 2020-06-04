@@ -80,7 +80,7 @@ def load_checkpoint_model(checkpoint_path):
     print('------------------------------------')
     
     resume_model = load_model(f'{checkpoint_path}/{max_epoch_filename}')
-    return resume_model, max_epoch_number
+    return resume_model, int(max_epoch_number)
 
 
 def get_model(model_type, input_shape, learning_rate, weight_decay, optimizer, momentum):
